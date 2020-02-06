@@ -3,13 +3,15 @@ package exercise.leolord;
 public class Member extends Person{
     private boolean isBasic;
 
-    public String getMemberType(){
-        if(isBasic){
-            return "Basic";
-        } else{
-            return "Full";
-        }
+
+    public Member() {
     }
+
+    public Member(String name, String cpr, boolean isBasic) {
+        super(name, cpr);
+        this.isBasic = isBasic;
+    }
+
     public int monthlyFee(){
         if(isBasic){
             return 199;
@@ -17,9 +19,11 @@ public class Member extends Person{
             return 299;
         }
     }
-
-    public Member(String name, String cpr, boolean isBasic) {
-        super(name, cpr);
-        this.isBasic = isBasic;
+    public String getMemberType(){
+        if(isBasic){
+            return "Basic";
+        } else{
+            return "Full";
+        }
     }
 }

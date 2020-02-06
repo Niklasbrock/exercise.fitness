@@ -5,6 +5,13 @@ public class Employee extends Person{
     private int salary;
     private int vacation;
 
+
+    public Employee() {
+    }
+
+    public Employee(String name, String cpr) {
+        super(name, cpr);
+    }
     public int getHours() {
         return hours;
     }
@@ -27,9 +34,5 @@ public class Employee extends Person{
 
     public void setVacation(int vacation) {
         this.vacation = vacation;
-    }
-
-    public Employee(String name, String cpr) {
-        super(name, cpr);
     }
 }
