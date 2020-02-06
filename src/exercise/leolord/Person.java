@@ -6,7 +6,6 @@ public class Person {
 
     public Person() {
     }
-
     Person(String name, String cpr){
         this.name = name;
         this.cpr = cpr;

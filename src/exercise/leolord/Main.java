@@ -41,7 +41,11 @@ public class Main {
         System.out.println("***************************************************************************");
         for (Employee employee :
                 employees) {
-            System.out.printf("%-20s%-15s%-15s%-15s%-15s\n", employee.getName(), employee.getCpr(), employee.getHours(), employee.getSalary(), employee.getVacation());
+            if (employee instanceof Administration){
+                System.out.printf("%-20s%-15s%-15s%-15s%-15s\n", employee.getName(), employee.getCpr(), employee.getHours(), employee.getSalary(), ((Administration) employee).getVacation());
+            } else{
+                System.out.printf("%-20s%-15s%-15s%-15s\n", employee.getName(), employee.getCpr(), employee.getHours(), employee.getSalary());
+            }
         }
 
         System.out.println();

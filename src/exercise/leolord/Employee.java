@@ -3,7 +3,7 @@ package exercise.leolord;
 public class Employee extends Person{
     private int hours;
     private int salary;
-    private int vacation;
+
 
 
     public Employee() {
@@ -28,11 +28,4 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    public int getVacation() {
-        return vacation;
-    }
-
-    public void setVacation(int vacation) {
-        this.vacation = vacation;
-    }
 }
